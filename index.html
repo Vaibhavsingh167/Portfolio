@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibhav Singh | Portfolio</title>
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background: #f5f5f5; color: #333; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(90%, 1200px); margin: auto; padding: 2rem 0; }
+
+    /* Navbar */
+    nav { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+    .nav-logo { font-size: 1.5rem; font-weight: bold; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a:hover { color: #0077ff; }
+
+    /* Hero */
+    #hero { text-align: center; padding: 4rem 0; }
+    #hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    #hero p { font-size: 1.2rem; color: #555; }
+    #hero .cta { display: inline-block; margin-top: 2rem; padding: 0.75rem 1.5rem; background: #0077ff; color: #fff; border-radius: 50px; transition: background 0.3s; }
+    #hero .cta:hover { background: #005bb5; }
+
+    /* Sections */
+    section { padding: 4rem 0; }
+    .section-title { text-align: center; font-size: 2rem; margin-bottom: 2rem; position: relative; }
+    .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #0077ff; margin: 0.5rem auto 0; }
+
+    /* About */
+    #about { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; align-items: center; }
+    #about img { border-radius: 10px; }
+    #about .about-text { font-size: 1rem; }
+
+    /* Skills */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: 1rem; }
+    .skill { background: #fff; padding: 1rem; text-align: center; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+
+    /* Projects */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+    .project-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card img { height: 180px; object-fit: cover; }
+    .project-card-content { padding: 1.5rem; }
+    .project-card-content h3 { margin-bottom: 0.5rem; }
+    .project-card-content p { font-size: 0.9rem; color: #555; margin-bottom: 1rem; }
+    .project-card-content a { font-weight: bold; }
+
+    /* Contact */
+    #contact form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 1rem; }
+    #contact input, #contact textarea { padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+    #contact button { padding: 0.75rem; background: #0077ff; color: #fff; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; transition: background 0.3s; }
+    #contact button:hover { background: #005bb5; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem 0; color: #777; font-size: 0.9rem; }
+
+    /* Dark Mode */
+    .dark-mode { background: #121212; color: #ddd; }
+    .dark-mode nav { background: #1e1e1e; box-shadow: none; }
+    .dark-mode .skill, .dark-mode .project-card, .dark-mode #about img { background: #1e1e1e; box-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+    .dark-mode .section-title::after, .dark-mode .cta, .dark-mode button { background: #bb86fc; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container container">
+      <div class="nav-logo">Vaibhav Singh</div>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" title="Toggle Dark/Light Mode">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="container">
+      <h1>Hello, I'm Vaibhav Singh</h1>
+      <p>Full-Stack Developer &amp; Gaming Enthusiast</p>
+      <a href="#projects" class="cta">See My Work</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <img src="https://via.placeholder.com/400x400" alt="Vaibhav Singh">
+      <div class="about-text">
+        <p>I'm a passionate software developer based in India, specializing in creating dynamic and responsive web applications. With a strong foundation in algorithms and data structures, I love solving complex problems and continuously learning new technologies. Outside of coding, you'll find me strategizing in Dungeons & Dragons or planning the best character builds for Baldur's Gate 3.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML &amp; CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">Flask &amp; SQLAlchemy</div>
+        <div class="skill">Algorithms &amp; Data Structures</div>
+        <div class="skill">Game Strategy</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="TODO App">
+          <div class="project-card-content">
+            <h3>TODO Web App</h3>
+            <p>A full-featured TODO list application built with Flask, SQLite, and JavaScript. It supports creating, editing, and deleting tasks with a sleek UI.</p>
+            <a href="#" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="BG3 Planner">
+          <div class="project-card-content">
+            <h3>BG3 Character Planner</h3>
+            <p>An interactive tool to plan and optimize Hexblade Warlock builds for Baldur's Gate 3, including spell selection and invocations recommendations.</p>
+            <a href="#" target="_blank">Explore the Planner</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="OS Visualizer">
+          <div class="project-card-content">
+            <h3>OS Algorithm Visualizer</h3>
+            <p>A visualization tool for demonstrating process scheduling and synchronization algorithms like Peterson's and Dekker's, built with HTML5 Canvas and JS.</p>
+            <a href="#" target="_blank">Try It Live</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <form action="mailto:vaibhav@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vaibhav Singh. All rights reserved.</p>
+    <p>
+      <a href="https://github.com/vaibhav" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/vaibhav" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script>
+    // Dark/Light Mode Toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
